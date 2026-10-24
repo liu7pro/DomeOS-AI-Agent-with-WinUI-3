@@ -28,7 +28,7 @@
 
             <Image x:Name="LogoImage" Grid.Column="0" Width="18" Height="18"
                    Margin="18,0,0,0" VerticalAlignment="Center" />
-            <TextBlock Grid.Column="1" Text="DomeOS AI Agent Dev" Margin="11,0,0,0"
+            <TextBlock x:Name="BrandTitle" Grid.Column="1" Text="DomeOS AI" Margin="11,0,0,0"
                        Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" />
         </Grid>
 
@@ -1034,7 +1034,7 @@
                                         <Image x:Name="AboutLogoImage" Grid.Column="0" Width="52" Height="52"
                                                Margin="0,0,16,0" VerticalAlignment="Top" />
                                         <StackPanel Grid.Column="1" Spacing="6">
-                                            <TextBlock Text="DomeOS AI Agent Dev"
+                                            <TextBlock x:Name="AboutNameText" Text="DomeOS AI"
                                                        Style="{StaticResource BodyStrongTextBlockStyle}" />
                                             <TextBlock Text="DomeOS Team AI Agent"
                                                        Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="Wrap" />
@@ -1161,7 +1161,7 @@
                         <TextBlock x:Name="OnboardVersionText" Text="开发版"
                                    Style="{StaticResource CaptionTextBlockStyle}"
                                    Foreground="#FFC3C5C9" />
-                        <TextBlock Text="DomeOS AI Agent Dev" FontSize="22" FontWeight="SemiBold"
+                        <TextBlock x:Name="OnboardBrandText" Text="DomeOS AI" FontSize="22" FontWeight="SemiBold"
                                    Foreground="White" TextWrapping="Wrap" />
                     </StackPanel>
                 </Grid>

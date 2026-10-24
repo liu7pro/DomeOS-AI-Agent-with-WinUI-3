@@ -167,8 +167,11 @@ namespace DomeOSAgentDev
 
             _settings = SettingsStore.Load();
 
-            Title = "DomeOS AI Agent Dev";
-            AppWindow.Title = "DomeOS AI Agent Dev";
+            Title = AppInfo.DisplayName;
+            AppWindow.Title = AppInfo.DisplayName;
+            BrandTitle.Text = AppInfo.DisplayName;
+            AboutNameText.Text = AppInfo.DisplayName;
+            OnboardBrandText.Text = AppInfo.DisplayName;
 
             LoadBranding();
             SetupTitleBar();
@@ -595,7 +598,7 @@ namespace DomeOSAgentDev
                 case 0:
                 {
                     OnboardTitle("语言");
-                    OnboardParagraph("在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。");
+                    OnboardParagraph("在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。");
 
                     _onboardLanguage = new ComboBox
                     {

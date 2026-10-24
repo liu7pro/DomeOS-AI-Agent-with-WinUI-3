@@ -5,7 +5,7 @@
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <RootNamespace>DomeOSAgentDev</RootNamespace>
-    <AssemblyName>DomeOS AI Agent Dev</AssemblyName>
+    <AssemblyName>DomeOS AI</AssemblyName>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <!-- 让 exe 本身带上图标：资源管理器、任务栏、安装包都读它 -->
     <ApplicationIcon>Assets\app.ico</ApplicationIcon>

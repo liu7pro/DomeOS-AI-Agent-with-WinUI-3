@@ -267,7 +267,7 @@ namespace DomeOSAgentDev
                 uFlags = NifMessage | NifIcon | NifTip | NifShowTip,
                 uCallbackMessage = _callbackMessage,
                 hIcon = _icon,
-                szTip = "DomeOS AI Agent Dev",
+                szTip = AppInfo.DisplayName,
                 szInfo = string.Empty,
                 szInfoTitle = string.Empty,
             };
@@ -285,7 +285,7 @@ namespace DomeOSAgentDev
 
             try
             {
-                AppendMenu(menu, MfString, IdShow, "打开 DomeOS AI Agent Dev");
+                AppendMenu(menu, MfString, IdShow, "打开 " + AppInfo.DisplayName);
                 AppendMenu(menu, MfSeparator, 0, null);
                 AppendMenu(menu, MfString, IdChat, "对话");
                 AppendMenu(menu, MfString, IdWorkspace, "工作区");

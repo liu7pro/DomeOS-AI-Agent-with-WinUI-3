@@ -259,8 +259,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Voice",
             ["外观"] = "Appearance",
             ["开发版"] = "Dev build",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Before we set up DomeOS AI Agent Dev, choose the language you would like to use.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Before we set up DomeOS AI, choose the language you would like to use.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "I will answer in the language you pick; Auto follows the language you type in.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -442,8 +442,8 @@ namespace DomeOSAgentDev
             ["语音"] = "語音",
             ["外观"] = "外觀",
             ["开发版"] = "開發版",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "在我們開始設定 DomeOS AI Agent Dev 之前，請選擇您希望使用的語言。",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "在我們開始設定 DomeOS AI 之前，請選擇您希望使用的語言。",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "選了哪種語言，本小姐就用哪種語言回答；「自動」會跟著您輸入的語言走。",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -537,8 +537,8 @@ namespace DomeOSAgentDev
             ["语音"] = "音声",
             ["外观"] = "外観",
             ["开发版"] = "開発版",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "DomeOS AI Agent Dev のセットアップを始める前に、使用する言語を選んでください。",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "DomeOS AI のセットアップを始める前に、使用する言語を選んでください。",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "選んだ言語で答えるよ。「自動」なら入力した言語に合わせる。",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -632,8 +632,8 @@ namespace DomeOSAgentDev
             ["语音"] = "음성",
             ["外观"] = "모양",
             ["开发版"] = "개발판",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "DomeOS AI Agent Dev 설정을 시작하기 전에 사용할 언어를 선택하세요.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "DomeOS AI 설정을 시작하기 전에 사용할 언어를 선택하세요.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "선택한 언어로 답할게요. '자동'은 입력한 언어를 따라갑니다.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -727,8 +727,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Голос",
             ["外观"] = "Оформление",
             ["开发版"] = "Dev-сборка",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Прежде чем настроить DomeOS AI Agent Dev, выберите язык.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Прежде чем настроить DomeOS AI, выберите язык.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "Отвечаю на выбранном языке; «Авто» следует языку ввода.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -822,8 +822,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Voix",
             ["外观"] = "Apparence",
             ["开发版"] = "Version de dev",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Avant de configurer DomeOS AI Agent Dev, choisissez la langue à utiliser.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Avant de configurer DomeOS AI, choisissez la langue à utiliser.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "Je répondrai dans la langue choisie ; « Auto » suit la langue de saisie.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -917,8 +917,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Stimme",
             ["外观"] = "Darstellung",
             ["开发版"] = "Entwicklerversion",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Bevor wir DomeOS AI Agent Dev einrichten, wähle die gewünschte Sprache.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Bevor wir DomeOS AI einrichten, wähle die gewünschte Sprache.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "Ich antworte in der gewählten Sprache; „Automatisch“ folgt deiner Eingabe.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -1012,8 +1012,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Голос",
             ["外观"] = "Вигляд",
             ["开发版"] = "Версія для розробників",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Перш ніж налаштувати DomeOS AI Agent Dev, виберіть бажану мову.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Перш ніж налаштувати DomeOS AI, виберіть бажану мову.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "Відповідатиму обраною мовою; «Авто» слідує за мовою вводу.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
@@ -1107,8 +1107,8 @@ namespace DomeOSAgentDev
             ["语音"] = "Voz",
             ["外观"] = "Apariencia",
             ["开发版"] = "Versión de desarrollo",
-            ["在我们开始设置 DomeOS AI Agent Dev 之前，请选择您希望使用的语言。"] =
-                "Antes de configurar DomeOS AI Agent Dev, elige el idioma que quieres usar.",
+            ["在我们开始设置 DomeOS AI 之前，请选择您希望使用的语言。"] =
+                "Antes de configurar DomeOS AI, elige el idioma que quieres usar.",
             ["选了哪种语言，本小姐就用哪种语言回答；「自动」会跟着您输入的语言走。"] =
                 "Responderé en el idioma elegido; «Automático» sigue el idioma que escribas.",
             ["填入服务商的密钥。也可以选「Custom API」，接任何 OpenAI 兼容的接口。"] =
