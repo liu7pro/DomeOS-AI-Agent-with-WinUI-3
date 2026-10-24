@@ -1,0 +1,10 @@
+bin/
+obj/
+dist/
+setup-src/
+DomeOS-AI-Agent-Dev-Setup.exe
+*.zip
+*.tmp
+*.bak
+*.corrupt-*
+.vs/

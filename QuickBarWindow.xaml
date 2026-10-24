@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="DomeOSAgentDev.QuickBarWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- 指令栏：点一下球体弹出来的临时输入条 -->
+    <Grid x:Name="BarRoot" Background="Transparent">
+        <Grid Margin="16,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="BarBox" Grid.Column="0" BorderThickness="0" Background="Transparent"
+                         PlaceholderText="问问本小姐…" TextWrapping="Wrap" AcceptsReturn="False"
+                         VerticalAlignment="Center" KeyDown="BarBox_KeyDown" />
+
+                <Button x:Name="BarMic" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center"
+                        Padding="10,6" Click="BarMic_Click">
+                    <FontIcon x:Name="BarMicIcon" FontFamily="Segoe Fluent Icons,Segoe MDL2 Assets"
+                              Glyph="&#xE720;" FontSize="14" />
+                </Button>
+
+                <Button x:Name="BarSend" Grid.Column="2" Margin="8,0,0,0" VerticalAlignment="Center"
+                        Style="{StaticResource AccentButtonStyle}" Content="发送" Click="BarSend_Click" />
+            </Grid>
+
+            <TextBlock x:Name="BarStatus" Grid.Row="1" Margin="0,6,0,0" TextWrapping="Wrap"
+                       Style="{StaticResource CaptionTextBlockStyle}" />
+        </Grid>
+    </Grid>
+</Window>

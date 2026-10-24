@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>DomeOSAgentDev</RootNamespace>
+    <AssemblyName>DomeOS AI Agent Dev</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- 让 exe 本身带上图标：资源管理器、任务栏、安装包都读它 -->
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <!-- unpackaged + self contained: no MSIX, no separately installed Windows App SDK runtime -->
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.*" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.*" />
+    <!-- 讲述人用的就是这套 SAPI 语音栈，读起来比 WinRT 那套自然、也没那么赶 -->
+    <PackageReference Include="System.Speech" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\**" CopyToOutputDirectory="PreserveNewest" />
+    <!-- 微信 / QQ 发送助手：随程序一起发布，im_send 调它驱动已登录的窗口 -->
+    <None Update="DomeOSIM.exe" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
