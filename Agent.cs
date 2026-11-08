@@ -101,7 +101,8 @@ namespace DomeOSAgentDev
                        + "\n\n" + languageRules;
             }
 
-            // 没挑工作区照样能聊天：只是这一轮手里没有文件工具，需要动文件时就请主人先选文件夹。
+            // 没挑工作区照样能聊天：只是这一轮手里没有文件工具，需要动文件时就请主人先选
+            // 工作区。注意：PowerShell 命令不是沙箱，即使 cwd 在工作区中也能访问其他位置。
             bool hasWorkspace = !string.IsNullOrWhiteSpace(workspace);
 
             List<string> parts = new List<string>();
@@ -129,8 +130,10 @@ namespace DomeOSAgentDev
                         ? "PERMISSION: whole-computer access. Any absolute path on any drive is allowed, not just the "
                           + "workspace: Windows system folders, other user profiles, other drives, the registry through "
                           + "run_command - all reachable. Be careful, a wrong delete_path or run_command here is permanent."
-                        : "PERMISSION: workspace only. Every path must stay inside the workspace root; the tools refuse "
-                          + "anything outside it, so do not try to reach other folders.")
+                        : "PERMISSION: file tools are restricted to the workspace root. IMPORTANT: run_command starts "
+                          + "an ordinary PowerShell process, not a sandbox; commands can access files and resources "
+                          + "outside the workspace with the user's Windows permissions. Never claim shell commands are "
+                          + "confined to the workspace, and get explicit user approval before each command.")
                     : "PERMISSION: no file access at all this turn.",
                 string.Empty,
                 "Rules:",
@@ -148,7 +151,7 @@ namespace DomeOSAgentDev
                 rules.Add("2. Prefer replace_in_file over write_file when only part of a file changes.");
                 rules.Add(scope == "machine"
                     ? "3. Use absolute paths (C:\\Users\\..., D:\\...) for anything outside the workspace."
-                    : "3. Every path you pass to a tool is relative to the workspace root.");
+                    : "3. Every path you pass to a file tool is relative to the workspace root. This does not sandbox run_command.");
                 rules.Add("4. Run the tests or the build after changing code, and fix what breaks.");
             }
 
@@ -319,7 +322,10 @@ namespace DomeOSAgentDev
 
                     string title = spec?.Title ?? call.Name;
                     bool dangerous = spec?.Dangerous ?? true;
-                    bool needsAsk = settings.Enabled && dangerous && !settings.AutoApprove;
+                    // PowerShell is not restricted to its working directory. Always ask before running
+                    // commands, even when the general auto-approve option is enabled.
+                    bool needsAsk = settings.Enabled && dangerous
+                                    && (!settings.AutoApprove || call.Name == "run_command");
 
                     if (needsAsk)
                     {
@@ -364,7 +370,7 @@ namespace DomeOSAgentDev
                 }
             }
 
-            hooks.Thinking?.Invoke("已经用完 " + settings.MaxSteps + " 轮工具调用，先停在这里。");
+            hooks.Thinking?.Invoke("已经用完 " + stepLimit + " 轮工具调用，先停在这里。");
 
             return new AgentOutcome
             {
